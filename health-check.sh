@@ -63,6 +63,6 @@ then
   git config --global user.name 'Tamilvanan Gowran'
   git config --global user.email 'tamilbecse139@gmail.com'
   git add -A --force logs/
-  git commit -am '[Automated] Update Health Check Logs - (status page)'
+  git commit -am '[Automated🔁] Update Health Check Logs📑👨‍💻 - (status pagepage🌐)'
   git push
 fi
