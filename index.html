@@ -1,0 +1,101 @@
+<html>
+
+<head>
+  <title>Status Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js"></script>
+  <!-- MDB Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
+  <style>
+    .social-icon {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .social-icon:hover {
+      transform: scale(1.2);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pageContainer">
+    <div class="headline">
+      <img src="logo.svg" alt="Logo" width="150px" />
+      <span> System Status </span>
+    </div>
+    <div id="reports" class="reportContainer"></div>
+    <div id="tooltip" class="tooltip" style="opacity: 0">
+      <div id="tooltipArrow" class="tooltipArrow"></div>
+      <div id="tooltipDateTime" class="tooltipDateTime"></div>
+      <div id="tooltipStatus" class="tooltipStatus"></div>
+      <hr />
+      <div id="tooltipDescription" class="tooltipDescription"></div>
+    </div>
+    <div id="templates" style="display: none">
+      <div id="statusSquareTemplate" class="statusSquare $color" data-status="$color"></div>
+      <div id="statusLineTemplate" class="statusLine"></div>
+      <div id="statusStreamContainerTemplate" class="statusStreamContainer"></div>
+      <div id="statusContainerTemplate" class="statusContainer">
+        <div class="statusHeader">
+          <h6 class="statusTitle">$title&nbsp;</h6>
+          <div class="$color statusHeadline">$status</div>
+        </div>
+        <div class="statusSubtitle">
+          <div class="statusUptime">$upTime in the last 30 days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <!-- Footer -->
+  <!-- Footer -->
+<footer class="text-center text-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col items-center">
+      <h6 class="text-lg font-medium text-gray-800 mb-2">Connect With Me</h6>
+    </div>
+    <div class="container p-3">
+      <section class="mb-3">
+        <a class="btn btn-primary btn-floating m-1 social-icon" style="background-color: #55acee;" href="https://x.com/GTamilvananOff" role="button">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a class="btn btn-primary btn-floating m-1 social-icon" style="background-color: #ac2bac;" href="https://instagram.com/gtamilvanan17" role="button">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="btn btn-primary btn-floating m-1 social-icon" style="background-color: #0082ca;" href="https://www.linkedin.com/in/gtamilvanan17/" role="button">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="btn btn-primary btn-floating m-1 social-icon" style="background-color: #333333;" href="https://github.com/gtamilvanan17" role="button">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="btn btn-primary btn-floating m-1 social-icon" style="background-color: #333333;" href="https://gtamilvanan17.github.io/portfolio/" role="button">
+          <i class="fas fa-globe"></i>
+        </a>
+        <a class="btn btn-primary btn-floating m-1 social-icon" style="background-color: #ea4335;" href="mailto:hello@tamilvanan.live" role="button">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </section>
+    </div>
+    <div class="text-center p-2 text-gray-600 text-sm copyright-text">
+      © <span id="year"></span> All Rights Reserved <a class="text-gray-600" href="https://gtamilvanan17.github.io/portfolio/">Tamilvanan Gowran</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  
+  <!-- FontAwesome for icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+  <!-- MDB Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+  <script>
+    genAllReports();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
