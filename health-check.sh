@@ -21,9 +21,9 @@ do
   URLSARRAY+=(${TOKENS[1]})
 done < "$urlsConfig"
 
-echo "***********************"
+echo "**********************************************"
 echo "Starting health checks with ${#KEYSARRAY[@]} configs:"
-echo "***********************"
+echo "**********************************************"
 
 mkdir -p logs
 
