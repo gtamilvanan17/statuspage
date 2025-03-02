@@ -4,9 +4,6 @@ name: Scheduled Health Check
 on:
   schedule:
     - cron: "*/10 * * * *"
-  paths-ignore:
-    - 'README.md'
-    - 'urls.cfg'
     
 # on:
 #     push:
